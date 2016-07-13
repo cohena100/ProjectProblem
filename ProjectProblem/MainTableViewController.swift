@@ -63,8 +63,4 @@ class MainTableViewController: UITableViewController {
 
 extension MainTableViewController: MainMediatorDelegate {
     
-    func mainMediatorDelegateReloadData() {
-        tableView.reloadData()
-    }
-    
 }

@@ -9,7 +9,6 @@
 import Foundation
 
 protocol MainMediatorDelegate: class {
-    func mainMediatorDelegateReloadData()
 }
 
 class MainMediator {
