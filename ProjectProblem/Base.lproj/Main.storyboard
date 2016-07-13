@@ -30,6 +30,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xsi-FX-YNO" kind="show" id="jEo-lx-F58"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FolderCell" textLabel="Cc7-HD-3RI" style="IBUITableViewCellStyleDefault" id="1AM-CC-n8i">
                                 <rect key="frame" x="0.0" y="136" width="600" height="44"/>
@@ -47,6 +50,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xsi-FX-YNO" kind="show" id="b14-Va-tqc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -79,4 +85,7 @@
             <point key="canvasLocation" x="220" y="365"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0hC-cw-Jg9"/>
+    </inferredMetricsTieBreakers>
 </document>

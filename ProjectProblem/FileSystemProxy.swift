@@ -17,7 +17,7 @@ extension FileSystemProxy: IFileSystemProxy {
     func folderContent(rootFolder: NSURL?) -> [FileModel]? {
         let subPath: String
         if let rootFolder = rootFolder {
-            subPath = rootFolder.absoluteString
+            subPath = rootFolder.relativePath!
         } else {
             subPath = NSBundle.mainBundle().bundlePath
         }

@@ -19,13 +19,11 @@ class MainMediator {
     let fileBrowserCommands: IFileBrowserCommands
     var folderContent: [FileUI]?
     
-    init(delegate: MainMediatorDelegate?, fileBrowserCommands: IFileBrowserCommands) {
+    init(delegate: MainMediatorDelegate?, rootFolder: NSURL?, fileBrowserCommands: IFileBrowserCommands) {
         self.delegate = delegate
         self.fileBrowserCommands = fileBrowserCommands
-        dispatch_async(dispatch_get_main_queue()) {
-            self.setup()
-            self.delegate?.mainMediatorDelegateReloadData()
-        }
+        self.rootFolder = rootFolder
+        folderContent = fileBrowserCommands.folderContent(rootFolder)
     }
     
     // MARK: Public
@@ -39,12 +37,6 @@ class MainMediator {
             return 0
         }
         return folderContent.count
-    }
-    
-    // MARK: Setup
-    
-    func setup() {
-        folderContent = fileBrowserCommands.folderContent(rootFolder)
     }
     
 }

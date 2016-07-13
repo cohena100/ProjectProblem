@@ -14,8 +14,8 @@ class ModelFactory {
 
 extension ModelFactory: IModelFactory {
     
-    func getMainMediator(delegate: MainMediatorDelegate?) -> MainMediator {
-        return MainMediator(delegate: delegate, fileBrowserCommands: FileBrowserCommands(fileSystemProxy: fileSystemProxy))
+    func getMainMediator(delegate delegate: MainMediatorDelegate?, rootFolder: NSURL?) -> MainMediator {
+        return MainMediator(delegate: delegate, rootFolder: rootFolder, fileBrowserCommands: FileBrowserCommands(fileSystemProxy: fileSystemProxy))
     }
     
 }

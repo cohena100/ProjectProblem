@@ -10,6 +10,6 @@ import Foundation
 
 protocol IModelFactory {
     
-    func getMainMediator(delegate: MainMediatorDelegate?) -> MainMediator
+    func getMainMediator(delegate delegate: MainMediatorDelegate?, rootFolder: NSURL?) -> MainMediator
     
 }
