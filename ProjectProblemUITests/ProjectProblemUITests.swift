@@ -12,15 +12,11 @@ class ProjectProblemUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        let app = XCUIApplication()
+        app.launchArguments.append("-test")
+        app.launchArguments.append("true")
+        app.launch()
     }
     
     override func tearDown() {
@@ -29,8 +25,23 @@ class ProjectProblemUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let element = app.staticTexts["Root View"]
+        self.waitForElementToAppear(element)
+    }
+    
+    func waitForElementToAppear(element: XCUIElement, timeout: NSTimeInterval = 5,  file: String = #file, line: UInt = #line) {
+        let existsPredicate = NSPredicate(format: "exists == true")
+        
+        expectationForPredicate(existsPredicate,
+                                evaluatedWithObject: element, handler: nil)
+        
+        waitForExpectationsWithTimeout(timeout) { (error) -> Void in
+            if (error != nil) {
+                let message = "Failed to find \(element) after \(timeout) seconds."
+                self.recordFailureWithDescription(message, inFile: file, atLine: line, expected: true)
+            }
+        }
     }
     
 }

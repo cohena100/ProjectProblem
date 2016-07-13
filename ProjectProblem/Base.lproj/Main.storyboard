@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Main Table View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="tJ0-1Y-LuJ">
             <objects>
                 <tableViewController id="xsi-FX-YNO" customClass="MainTableViewController" customModule="ProjectProblem" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
                             <outlet property="delegate" destination="xsi-FX-YNO" id="81H-WH-vZB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dTB-YK-5IQ"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="dTB-YK-5IQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hI-LL-gnu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
