@@ -33,6 +33,9 @@
 		04BF4B571D3630AF00732871 /* FileSystemProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B561D3630AF00732871 /* FileSystemProxy.swift */; };
 		04BF4B591D36492000732871 /* coke_disc.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BF4B581D36492000732871 /* coke_disc.png */; };
 		04BF4B5B1D36492A00732871 /* pepsi-jpg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04BF4B5A1D36492A00732871 /* pepsi-jpg.jpg */; };
+		04BF4B5D1D36601600732871 /* ILoggerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B5C1D36601600732871 /* ILoggerProxy.swift */; };
+		04BF4B5E1D36601600732871 /* ILoggerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B5C1D36601600732871 /* ILoggerProxy.swift */; };
+		04BF4B621D36608C00732871 /* LoggerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B611D36608C00732871 /* LoggerProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,8 @@
 		04BF4B561D3630AF00732871 /* FileSystemProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemProxy.swift; sourceTree = "<group>"; };
 		04BF4B581D36492000732871 /* coke_disc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coke_disc.png; sourceTree = "<group>"; };
 		04BF4B5A1D36492A00732871 /* pepsi-jpg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pepsi-jpg.jpg"; sourceTree = "<group>"; };
+		04BF4B5C1D36601600732871 /* ILoggerProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILoggerProxy.swift; sourceTree = "<group>"; };
+		04BF4B611D36608C00732871 /* LoggerProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +174,8 @@
 				04BF4B4D1D3621B500732871 /* FileModel.swift */,
 				04BF4B531D36309700732871 /* IFileSystemProxy.swift */,
 				04BF4B561D3630AF00732871 /* FileSystemProxy.swift */,
+				04BF4B5C1D36601600732871 /* ILoggerProxy.swift */,
+				04BF4B611D36608C00732871 /* LoggerProxy.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -330,12 +337,14 @@
 				04BF4B4B1D3620DF00732871 /* FileBrowserCommands.swift in Sources */,
 				04BF4B391D36014600732871 /* MainTableViewController.swift in Sources */,
 				047491311D35FF590069903F /* AppDelegate.swift in Sources */,
+				04BF4B621D36608C00732871 /* LoggerProxy.swift in Sources */,
 				04BF4B481D3620BA00732871 /* IFileBrowserCommands.swift in Sources */,
 				04BF4B421D36034D00732871 /* IModelFactory.swift in Sources */,
 				04BF4B4E1D3621B500732871 /* FileModel.swift in Sources */,
 				04BF4B541D36309700732871 /* IFileSystemProxy.swift in Sources */,
 				04BF4B3E1D3602E300732871 /* Model.swift in Sources */,
 				04BF4B571D3630AF00732871 /* FileSystemProxy.swift in Sources */,
+				04BF4B5D1D36601600732871 /* ILoggerProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +357,7 @@
 				04BF4B521D3629D800732871 /* FileUI.swift in Sources */,
 				04BF4B4F1D3621B500732871 /* FileModel.swift in Sources */,
 				04BF4B431D36034D00732871 /* IModelFactory.swift in Sources */,
+				04BF4B5E1D36601600732871 /* ILoggerProxy.swift in Sources */,
 				04BF4B4C1D3620DF00732871 /* FileBrowserCommands.swift in Sources */,
 				04BF4B461D36043800732871 /* MainMediator.swift in Sources */,
 				047491461D35FF5A0069903F /* ProjectProblemTests.swift in Sources */,

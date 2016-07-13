@@ -10,12 +10,13 @@ import Foundation
 
 class ModelFactory {
     let fileSystemProxy = FileSystemProxy()
+    let logger = LoggerProxy()
 }
 
 extension ModelFactory: IModelFactory {
     
     func getMainMediator(delegate delegate: MainMediatorDelegate?, rootFolder: NSURL?) -> MainMediator {
-        return MainMediator(delegate: delegate, rootFolder: rootFolder, fileBrowserCommands: FileBrowserCommands(fileSystemProxy: fileSystemProxy))
+        return MainMediator(delegate: delegate, rootFolder: rootFolder, fileBrowserCommands: FileBrowserCommands(fileSystemProxy: fileSystemProxy), logger: logger)
     }
     
 }

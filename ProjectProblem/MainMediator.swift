@@ -13,16 +13,25 @@ protocol MainMediatorDelegate: class {
 
 class MainMediator {
     
+    let fileBrowserCommands: IFileBrowserCommands
+    let logger: ILoggerProxy
     weak var delegate: MainMediatorDelegate?
     var rootFolder: NSURL?
-    let fileBrowserCommands: IFileBrowserCommands
     var folderContent: [FileUI]?
     
-    init(delegate: MainMediatorDelegate?, rootFolder: NSURL?, fileBrowserCommands: IFileBrowserCommands) {
+    init(delegate: MainMediatorDelegate?, rootFolder: NSURL?, fileBrowserCommands: IFileBrowserCommands, logger: ILoggerProxy) {
         self.delegate = delegate
         self.fileBrowserCommands = fileBrowserCommands
         self.rootFolder = rootFolder
+        self.logger = logger
         folderContent = fileBrowserCommands.folderContent(rootFolder)
+        let logLine: String
+        if let rootFolder = rootFolder, path = rootFolder.relativePath {
+            logLine = path
+        } else {
+            logLine = ""
+        }
+        logger.log(logLine)
     }
     
     // MARK: Public
