@@ -10,7 +10,7 @@ import Foundation
 
 class LoggerProxy {
     
-    var fileHandler: NSFileHandle!
+    let fileHandler: NSFileHandle!
     let operationQueue = NSOperationQueue()
     
     init() {
@@ -21,9 +21,11 @@ class LoggerProxy {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentsDirectory = paths[0]
         let appFile = documentsDirectory.stringByAppendingString("/fileLog")
-        fileHandler = NSFileHandle(forUpdatingAtPath: appFile)
-        if fileHandler == nil {
-            NSFileManager.defaultManager().createFileAtPath(appFile, contents: nil, attributes: nil)
+        let fm = NSFileManager.defaultManager()
+        if fm.fileExistsAtPath(appFile) {
+            fileHandler = NSFileHandle(forUpdatingAtPath: appFile)
+        } else {
+            fm.createFileAtPath(appFile, contents: nil, attributes: nil)
             fileHandler = NSFileHandle(forUpdatingAtPath: appFile)
         }
         fileHandler.seekToEndOfFile()
