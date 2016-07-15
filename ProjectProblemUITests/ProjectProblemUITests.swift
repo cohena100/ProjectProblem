@@ -14,8 +14,8 @@ class ProjectProblemUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         let app = XCUIApplication()
-        app.launchArguments.append("-test")
-        app.launchArguments.append("true")
+//        app.launchArguments.append("-test")
+//        app.launchArguments.append("true")
         app.launch()
     }
     
@@ -24,11 +24,11 @@ class ProjectProblemUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        let app = XCUIApplication()
-        let element = app.staticTexts["Root View"]
-        self.waitForElementToAppear(element)
-    }
+//    func testExample() {
+//        let app = XCUIApplication()
+//        let element = app.staticTexts["Root View"]
+//        self.waitForElementToAppear(element)
+//    }
     
     func waitForElementToAppear(element: XCUIElement, timeout: NSTimeInterval = 5,  file: String = #file, line: UInt = #line) {
         let existsPredicate = NSPredicate(format: "exists == true")
@@ -42,6 +42,21 @@ class ProjectProblemUITests: XCTestCase {
                 self.recordFailureWithDescription(message, inFile: file, atLine: line, expected: true)
             }
         }
+    }
+    
+    func testBrowsing() {
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Base.lproj"].tap()
+        tablesQuery.staticTexts["LaunchScreen.storyboardc"].tap()
+        tablesQuery.staticTexts["01J-lp-oVM-view-Ze5-6b-2t3.nib"].tap()
+        app.navigationBars["01J-lp-oVM-view-Ze5-6b-2t3.nib"].buttons["Back"].tap()
+        app.navigationBars["LaunchScreen.storyboardc"].childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0).tap()
+        app.navigationBars["Base.lproj"].buttons["Root"].tap()
+        tablesQuery.staticTexts["Frameworks"].tap()
+        tablesQuery.staticTexts["IDEBundleInjection.framework"].tap()
+        tablesQuery.staticTexts["_CodeSignature"].tap()
+        
     }
     
 }

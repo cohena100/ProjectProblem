@@ -24,7 +24,7 @@ extension FileSystemProxyMock: IFileSystemProxy {
                 FileModel(path: "yellow.xcassets", isFolder: false),
             ]
         }
-        if rootFolder == "a" {
+        if rootFolder?.relativePath == "a" {
             return [
                 FileModel(path: "red.plist", isFolder: false),
                 FileModel(path: "blue.png", isFolder: false),
