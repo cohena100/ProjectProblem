@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043E85461D38EFF4009B2159 /* FileSystemProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E85431D38EFF4009B2159 /* FileSystemProxyMock.swift */; };
+		043E85471D38EFF4009B2159 /* LoggerProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E85441D38EFF4009B2159 /* LoggerProxyMock.swift */; };
+		043E85481D38EFF4009B2159 /* ModelFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E85451D38EFF4009B2159 /* ModelFactoryMock.swift */; };
+		043E854A1D38F01E009B2159 /* ModelFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E85451D38EFF4009B2159 /* ModelFactoryMock.swift */; };
+		043E854B1D38F01F009B2159 /* ModelFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E85451D38EFF4009B2159 /* ModelFactoryMock.swift */; };
+		043E854C1D38F021009B2159 /* LoggerProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E85441D38EFF4009B2159 /* LoggerProxyMock.swift */; };
+		043E854D1D38F022009B2159 /* LoggerProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E85441D38EFF4009B2159 /* LoggerProxyMock.swift */; };
+		043E854E1D38F025009B2159 /* FileSystemProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E85431D38EFF4009B2159 /* FileSystemProxyMock.swift */; };
+		043E854F1D38F026009B2159 /* FileSystemProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E85431D38EFF4009B2159 /* FileSystemProxyMock.swift */; };
 		0453FABA1D38E9CA00641231 /* FileBrowserCommandsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453FAB91D38E9CA00641231 /* FileBrowserCommandsTest.swift */; };
-		0453FABB1D38EA2400641231 /* FileSystemProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B6A1D36703000732871 /* FileSystemProxyMock.swift */; };
 		047491311D35FF590069903F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047491301D35FF590069903F /* AppDelegate.swift */; };
 		047491361D35FF590069903F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047491341D35FF590069903F /* Main.storyboard */; };
 		047491381D35FF590069903F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047491371D35FF590069903F /* Assets.xcassets */; };
@@ -38,13 +46,7 @@
 		04BF4B5D1D36601600732871 /* ILoggerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B5C1D36601600732871 /* ILoggerProxy.swift */; };
 		04BF4B5E1D36601600732871 /* ILoggerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B5C1D36601600732871 /* ILoggerProxy.swift */; };
 		04BF4B621D36608C00732871 /* LoggerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B611D36608C00732871 /* LoggerProxy.swift */; };
-		04BF4B641D366F6A00732871 /* ModelFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B631D366F6A00732871 /* ModelFactoryMock.swift */; };
-		04BF4B651D366F6A00732871 /* ModelFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B631D366F6A00732871 /* ModelFactoryMock.swift */; };
 		04BF4B661D366FB000732871 /* MainMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B441D36043800732871 /* MainMediator.swift */; };
-		04BF4B6B1D36703000732871 /* FileSystemProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B6A1D36703000732871 /* FileSystemProxyMock.swift */; };
-		04BF4B6C1D36703000732871 /* FileSystemProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B6A1D36703000732871 /* FileSystemProxyMock.swift */; };
-		04BF4B6E1D36706E00732871 /* LoggerProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B6D1D36706E00732871 /* LoggerProxyMock.swift */; };
-		04BF4B6F1D36706E00732871 /* LoggerProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B6D1D36706E00732871 /* LoggerProxyMock.swift */; };
 		04BF4B701D3670C400732871 /* IFileBrowserCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B471D3620BA00732871 /* IFileBrowserCommands.swift */; };
 		04BF4B711D3670F400732871 /* IModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B411D36034D00732871 /* IModelFactory.swift */; };
 		04BF4B721D3671F200732871 /* IFileSystemProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B531D36309700732871 /* IFileSystemProxy.swift */; };
@@ -72,6 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043E85431D38EFF4009B2159 /* FileSystemProxyMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemProxyMock.swift; sourceTree = "<group>"; };
+		043E85441D38EFF4009B2159 /* LoggerProxyMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProxyMock.swift; sourceTree = "<group>"; };
+		043E85451D38EFF4009B2159 /* ModelFactoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelFactoryMock.swift; sourceTree = "<group>"; };
 		0453FAB91D38E9CA00641231 /* FileBrowserCommandsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileBrowserCommandsTest.swift; sourceTree = "<group>"; };
 		0474912D1D35FF590069903F /* ProjectProblem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectProblem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047491301D35FF590069903F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,9 +105,6 @@
 		04BF4B5A1D36492A00732871 /* pepsi-jpg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pepsi-jpg.jpg"; sourceTree = "<group>"; };
 		04BF4B5C1D36601600732871 /* ILoggerProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILoggerProxy.swift; sourceTree = "<group>"; };
 		04BF4B611D36608C00732871 /* LoggerProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProxy.swift; sourceTree = "<group>"; };
-		04BF4B631D366F6A00732871 /* ModelFactoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelFactoryMock.swift; sourceTree = "<group>"; };
-		04BF4B6A1D36703000732871 /* FileSystemProxyMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemProxyMock.swift; sourceTree = "<group>"; };
-		04BF4B6D1D36706E00732871 /* LoggerProxyMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProxyMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043E85491D38EFF9009B2159 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				043E85431D38EFF4009B2159 /* FileSystemProxyMock.swift */,
+				043E85441D38EFF4009B2159 /* LoggerProxyMock.swift */,
+				043E85451D38EFF4009B2159 /* ModelFactoryMock.swift */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 		047491241D35FF590069903F = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +185,7 @@
 		047491441D35FF5A0069903F /* ProjectProblemTests */ = {
 			isa = PBXGroup;
 			children = (
+				043E85491D38EFF9009B2159 /* Mocks */,
 				047491451D35FF5A0069903F /* ProjectProblemTests.swift */,
 				047491471D35FF5A0069903F /* Info.plist */,
 				0453FAB91D38E9CA00641231 /* FileBrowserCommandsTest.swift */,
@@ -183,9 +196,6 @@
 		0474914F1D35FF5A0069903F /* ProjectProblemUITests */ = {
 			isa = PBXGroup;
 			children = (
-				04BF4B6A1D36703000732871 /* FileSystemProxyMock.swift */,
-				04BF4B6D1D36706E00732871 /* LoggerProxyMock.swift */,
-				04BF4B631D366F6A00732871 /* ModelFactoryMock.swift */,
 				047491501D35FF5A0069903F /* ProjectProblemUITests.swift */,
 				047491521D35FF5A0069903F /* Info.plist */,
 			);
@@ -360,15 +370,15 @@
 				04BF4B401D36031D00732871 /* ModelFactory.swift in Sources */,
 				04BF4B4B1D3620DF00732871 /* FileBrowserCommands.swift in Sources */,
 				04BF4B391D36014600732871 /* MainTableViewController.swift in Sources */,
-				04BF4B6B1D36703000732871 /* FileSystemProxyMock.swift in Sources */,
+				043E854E1D38F025009B2159 /* FileSystemProxyMock.swift in Sources */,
 				047491311D35FF590069903F /* AppDelegate.swift in Sources */,
 				04BF4B621D36608C00732871 /* LoggerProxy.swift in Sources */,
 				04BF4B481D3620BA00732871 /* IFileBrowserCommands.swift in Sources */,
 				04BF4B421D36034D00732871 /* IModelFactory.swift in Sources */,
 				04BF4B4E1D3621B500732871 /* FileModel.swift in Sources */,
 				04BF4B541D36309700732871 /* IFileSystemProxy.swift in Sources */,
-				04BF4B641D366F6A00732871 /* ModelFactoryMock.swift in Sources */,
-				04BF4B6E1D36706E00732871 /* LoggerProxyMock.swift in Sources */,
+				043E854A1D38F01E009B2159 /* ModelFactoryMock.swift in Sources */,
+				043E854C1D38F021009B2159 /* LoggerProxyMock.swift in Sources */,
 				04BF4B3E1D3602E300732871 /* Model.swift in Sources */,
 				04BF4B571D3630AF00732871 /* FileSystemProxy.swift in Sources */,
 				04BF4B5D1D36601600732871 /* ILoggerProxy.swift in Sources */,
@@ -384,12 +394,14 @@
 				04BF4B521D3629D800732871 /* FileUI.swift in Sources */,
 				04BF4B4F1D3621B500732871 /* FileModel.swift in Sources */,
 				0453FABA1D38E9CA00641231 /* FileBrowserCommandsTest.swift in Sources */,
+				043E85481D38EFF4009B2159 /* ModelFactoryMock.swift in Sources */,
 				04BF4B431D36034D00732871 /* IModelFactory.swift in Sources */,
 				04BF4B5E1D36601600732871 /* ILoggerProxy.swift in Sources */,
 				04BF4B4C1D3620DF00732871 /* FileBrowserCommands.swift in Sources */,
+				043E85471D38EFF4009B2159 /* LoggerProxyMock.swift in Sources */,
 				04BF4B461D36043800732871 /* MainMediator.swift in Sources */,
 				047491461D35FF5A0069903F /* ProjectProblemTests.swift in Sources */,
-				0453FABB1D38EA2400641231 /* FileSystemProxyMock.swift in Sources */,
+				043E85461D38EFF4009B2159 /* FileSystemProxyMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,13 +412,13 @@
 				04BF4B711D3670F400732871 /* IModelFactory.swift in Sources */,
 				04BF4B731D36724000732871 /* FileUI.swift in Sources */,
 				04BF4B751D36743400732871 /* FileBrowserCommands.swift in Sources */,
-				04BF4B651D366F6A00732871 /* ModelFactoryMock.swift in Sources */,
-				04BF4B6F1D36706E00732871 /* LoggerProxyMock.swift in Sources */,
 				04BF4B661D366FB000732871 /* MainMediator.swift in Sources */,
+				043E854D1D38F022009B2159 /* LoggerProxyMock.swift in Sources */,
+				043E854F1D38F026009B2159 /* FileSystemProxyMock.swift in Sources */,
 				04BF4B741D36724E00732871 /* ILoggerProxy.swift in Sources */,
 				04BF4B761D3674E400732871 /* FileModel.swift in Sources */,
+				043E854B1D38F01F009B2159 /* ModelFactoryMock.swift in Sources */,
 				04BF4B701D3670C400732871 /* IFileBrowserCommands.swift in Sources */,
-				04BF4B6C1D36703000732871 /* FileSystemProxyMock.swift in Sources */,
 				04BF4B721D3671F200732871 /* IFileSystemProxy.swift in Sources */,
 				047491511D35FF5A0069903F /* ProjectProblemUITests.swift in Sources */,
 			);
