@@ -18,6 +18,11 @@ class MainMediator {
     weak var delegate: MainMediatorDelegate?
     var rootFolder: NSURL?
     var folderContent: [FileUI]?
+    var title: String? {
+        get {
+            return rootFolder == nil ? "Root" : rootFolder?.lastPathComponent
+        }
+    }
     
     init(delegate: MainMediatorDelegate?, rootFolder: NSURL?, fileBrowserCommands: IFileBrowserCommands, logger: ILoggerProxy) {
         self.delegate = delegate

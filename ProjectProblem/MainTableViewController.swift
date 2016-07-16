@@ -16,7 +16,7 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mediator = Model.sharedInstance.factory.getMainMediator(delegate: self, rootFolder: rootFolder)
-        self.title = rootFolder == nil ? "Root" : rootFolder?.lastPathComponent
+        self.title = mediator.title
     }
 
     override func didReceiveMemoryWarning() {
