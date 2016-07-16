@@ -22,13 +22,6 @@ class MainTableViewController: UITableViewController {
         self.logger = setupElements.loggerProxy
         self.fileBrowserCommands = setupElements.fileBrowserCommands
         folderContent = fileBrowserCommands.folderContent(rootFolder)
-        let logLine: String
-        if let rootFolder = rootFolder, path = rootFolder.relativePath {
-            logLine = path
-        } else {
-            logLine = ""
-        }
-        logger.log(logLine)
     }
 
     override func didReceiveMemoryWarning() {

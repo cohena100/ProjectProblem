@@ -16,7 +16,7 @@ class ModelFactory {
 extension ModelFactory: IModelFactory {
     
     func setupElementsForMainTableViewController() -> (fileBrowserCommands: IFileBrowserCommands, loggerProxy: ILoggerProxy) {
-        return (fileBrowserCommands: FileBrowserCommands(fileSystemProxy: fileSystemProxy), loggerProxy: loggerProxy)
+        return (fileBrowserCommands: FileBrowserCommands(fileSystemProxy: fileSystemProxy, loggerProxy: loggerProxy), loggerProxy: loggerProxy)
     }
     
 }

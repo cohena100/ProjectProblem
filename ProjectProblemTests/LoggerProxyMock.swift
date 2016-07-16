@@ -10,11 +10,14 @@ import Foundation
 
 class LoggerProxyMock {
     
+    var lines = [String]()
+    
 }
 
 extension LoggerProxyMock: ILoggerProxy {
     
     func log(line: String) {
+        lines.append(line)
     }
     
 }

@@ -21,7 +21,6 @@
 		047491361D35FF590069903F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047491341D35FF590069903F /* Main.storyboard */; };
 		047491381D35FF590069903F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047491371D35FF590069903F /* Assets.xcassets */; };
 		0474913B1D35FF590069903F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047491391D35FF590069903F /* LaunchScreen.storyboard */; };
-		047491461D35FF5A0069903F /* ProjectProblemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047491451D35FF5A0069903F /* ProjectProblemTests.swift */; };
 		047491511D35FF5A0069903F /* ProjectProblemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047491501D35FF5A0069903F /* ProjectProblemUITests.swift */; };
 		04BF4B391D36014600732871 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B381D36014600732871 /* MainTableViewController.swift */; };
 		04BF4B3E1D3602E300732871 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B3D1D3602E300732871 /* Model.swift */; };
@@ -82,7 +81,6 @@
 		0474913A1D35FF590069903F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0474913C1D35FF590069903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047491411D35FF5A0069903F /* ProjectProblemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectProblemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		047491451D35FF5A0069903F /* ProjectProblemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProblemTests.swift; sourceTree = "<group>"; };
 		047491471D35FF5A0069903F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0474914C1D35FF5A0069903F /* ProjectProblemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectProblemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		047491501D35FF5A0069903F /* ProjectProblemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProblemUITests.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				043E85491D38EFF9009B2159 /* Mocks */,
-				047491451D35FF5A0069903F /* ProjectProblemTests.swift */,
 				047491471D35FF5A0069903F /* Info.plist */,
 				0453FAB91D38E9CA00641231 /* FileBrowserCommandsTest.swift */,
 			);
@@ -433,7 +430,6 @@
 				04BF4B5E1D36601600732871 /* ILoggerProxy.swift in Sources */,
 				04BF4B4C1D3620DF00732871 /* FileBrowserCommands.swift in Sources */,
 				043E85471D38EFF4009B2159 /* LoggerProxyMock.swift in Sources */,
-				047491461D35FF5A0069903F /* ProjectProblemTests.swift in Sources */,
 				043E85461D38EFF4009B2159 /* FileSystemProxyMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

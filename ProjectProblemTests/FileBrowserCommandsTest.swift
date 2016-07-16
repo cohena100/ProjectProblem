@@ -10,24 +10,28 @@ import XCTest
 
 class FileBrowserCommandsTest: XCTestCase {
 
-    var fileSystemProxy: IFileSystemProxy!
+    var loggerProxy: LoggerProxyMock!
+    var fileSystemProxy: FileSystemProxyMock!
     var commands: IFileBrowserCommands!
     
     override func setUp() {
         super.setUp()
+        loggerProxy = LoggerProxyMock()
         fileSystemProxy = FileSystemProxyMock()
-        commands = FileBrowserCommands(fileSystemProxy: fileSystemProxy)
+        commands = FileBrowserCommands(fileSystemProxy: fileSystemProxy, loggerProxy: loggerProxy)
     }
     
     override func tearDown() {
         commands = nil
         fileSystemProxy = nil
+        loggerProxy = nil
         super.tearDown()
     }
 
     func testFolderContent_rootFolder_5Files() {
         let folderContent = commands.folderContent(nil)
         XCTAssert(folderContent?.count == 5)
+        XCTAssertEqual(loggerProxy.lines.count, 1)
     }
 
     func testFolderContent_folderNamedA_6Files() {
