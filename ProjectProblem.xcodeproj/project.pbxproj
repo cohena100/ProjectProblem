@@ -28,8 +28,6 @@
 		04BF4B401D36031D00732871 /* ModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B3F1D36031D00732871 /* ModelFactory.swift */; };
 		04BF4B421D36034D00732871 /* IModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B411D36034D00732871 /* IModelFactory.swift */; };
 		04BF4B431D36034D00732871 /* IModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B411D36034D00732871 /* IModelFactory.swift */; };
-		04BF4B451D36043800732871 /* MainMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B441D36043800732871 /* MainMediator.swift */; };
-		04BF4B461D36043800732871 /* MainMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B441D36043800732871 /* MainMediator.swift */; };
 		04BF4B481D3620BA00732871 /* IFileBrowserCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B471D3620BA00732871 /* IFileBrowserCommands.swift */; };
 		04BF4B491D3620BA00732871 /* IFileBrowserCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B471D3620BA00732871 /* IFileBrowserCommands.swift */; };
 		04BF4B4B1D3620DF00732871 /* FileBrowserCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B4A1D3620DF00732871 /* FileBrowserCommands.swift */; };
@@ -46,7 +44,6 @@
 		04BF4B5D1D36601600732871 /* ILoggerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B5C1D36601600732871 /* ILoggerProxy.swift */; };
 		04BF4B5E1D36601600732871 /* ILoggerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B5C1D36601600732871 /* ILoggerProxy.swift */; };
 		04BF4B621D36608C00732871 /* LoggerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B611D36608C00732871 /* LoggerProxy.swift */; };
-		04BF4B661D366FB000732871 /* MainMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B441D36043800732871 /* MainMediator.swift */; };
 		04BF4B701D3670C400732871 /* IFileBrowserCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B471D3620BA00732871 /* IFileBrowserCommands.swift */; };
 		04BF4B711D3670F400732871 /* IModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B411D36034D00732871 /* IModelFactory.swift */; };
 		04BF4B721D3671F200732871 /* IFileSystemProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF4B531D36309700732871 /* IFileSystemProxy.swift */; };
@@ -94,7 +91,6 @@
 		04BF4B3D1D3602E300732871 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		04BF4B3F1D36031D00732871 /* ModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelFactory.swift; sourceTree = "<group>"; };
 		04BF4B411D36034D00732871 /* IModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IModelFactory.swift; sourceTree = "<group>"; };
-		04BF4B441D36043800732871 /* MainMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMediator.swift; sourceTree = "<group>"; };
 		04BF4B471D3620BA00732871 /* IFileBrowserCommands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFileBrowserCommands.swift; sourceTree = "<group>"; };
 		04BF4B4A1D3620DF00732871 /* FileBrowserCommands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileBrowserCommands.swift; sourceTree = "<group>"; };
 		04BF4B4D1D3621B500732871 /* FileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileModel.swift; sourceTree = "<group>"; };
@@ -140,6 +136,50 @@
 				043E85451D38EFF4009B2159 /* ModelFactoryMock.swift */,
 			);
 			name = Mocks;
+			sourceTree = "<group>";
+		};
+		04413B971D3A36CF0012C176 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				04BF4B4D1D3621B500732871 /* FileModel.swift */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
+		04413B981D3A36DE0012C176 /* Proxies */ = {
+			isa = PBXGroup;
+			children = (
+				04BF4B531D36309700732871 /* IFileSystemProxy.swift */,
+				04BF4B5C1D36601600732871 /* ILoggerProxy.swift */,
+				04BF4B561D3630AF00732871 /* FileSystemProxy.swift */,
+				04BF4B611D36608C00732871 /* LoggerProxy.swift */,
+			);
+			name = Proxies;
+			sourceTree = "<group>";
+		};
+		04413B991D3A36F70012C176 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				04BF4B381D36014600732871 /* MainTableViewController.swift */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
+		04413B9A1D3A37010012C176 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				04BF4B501D3629D800732871 /* FileUI.swift */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
+		04413B9B1D3A371C0012C176 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				04BF4B471D3620BA00732871 /* IFileBrowserCommands.swift */,
+				04BF4B4A1D3620DF00732871 /* FileBrowserCommands.swift */,
+			);
+			name = Commands;
 			sourceTree = "<group>";
 		};
 		047491241D35FF590069903F = {
@@ -205,11 +245,8 @@
 		04BF4B3A1D36015900732871 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04BF4B4D1D3621B500732871 /* FileModel.swift */,
-				04BF4B531D36309700732871 /* IFileSystemProxy.swift */,
-				04BF4B561D3630AF00732871 /* FileSystemProxy.swift */,
-				04BF4B5C1D36601600732871 /* ILoggerProxy.swift */,
-				04BF4B611D36608C00732871 /* LoggerProxy.swift */,
+				04413B971D3A36CF0012C176 /* Elements */,
+				04413B981D3A36DE0012C176 /* Proxies */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -217,9 +254,8 @@
 		04BF4B3B1D36015F00732871 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04BF4B381D36014600732871 /* MainTableViewController.swift */,
-				04BF4B441D36043800732871 /* MainMediator.swift */,
-				04BF4B501D3629D800732871 /* FileUI.swift */,
+				04413B9A1D3A37010012C176 /* Elements */,
+				04413B991D3A36F70012C176 /* VCs */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -227,8 +263,7 @@
 		04BF4B3C1D36016600732871 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04BF4B471D3620BA00732871 /* IFileBrowserCommands.swift */,
-				04BF4B4A1D3620DF00732871 /* FileBrowserCommands.swift */,
+				04413B9B1D3A371C0012C176 /* Commands */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -365,7 +400,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BF4B451D36043800732871 /* MainMediator.swift in Sources */,
 				04BF4B511D3629D800732871 /* FileUI.swift in Sources */,
 				04BF4B401D36031D00732871 /* ModelFactory.swift in Sources */,
 				04BF4B4B1D3620DF00732871 /* FileBrowserCommands.swift in Sources */,
@@ -399,7 +433,6 @@
 				04BF4B5E1D36601600732871 /* ILoggerProxy.swift in Sources */,
 				04BF4B4C1D3620DF00732871 /* FileBrowserCommands.swift in Sources */,
 				043E85471D38EFF4009B2159 /* LoggerProxyMock.swift in Sources */,
-				04BF4B461D36043800732871 /* MainMediator.swift in Sources */,
 				047491461D35FF5A0069903F /* ProjectProblemTests.swift in Sources */,
 				043E85461D38EFF4009B2159 /* FileSystemProxyMock.swift in Sources */,
 			);
@@ -412,7 +445,6 @@
 				04BF4B711D3670F400732871 /* IModelFactory.swift in Sources */,
 				04BF4B731D36724000732871 /* FileUI.swift in Sources */,
 				04BF4B751D36743400732871 /* FileBrowserCommands.swift in Sources */,
-				04BF4B661D366FB000732871 /* MainMediator.swift in Sources */,
 				043E854D1D38F022009B2159 /* LoggerProxyMock.swift in Sources */,
 				043E854F1D38F026009B2159 /* FileSystemProxyMock.swift in Sources */,
 				04BF4B741D36724E00732871 /* ILoggerProxy.swift in Sources */,

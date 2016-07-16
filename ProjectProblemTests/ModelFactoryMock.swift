@@ -11,14 +11,14 @@ import Foundation
 class ModelFactoryMock {
     
     let fileSystemProxy = FileSystemProxyMock()
-    let logger = LoggerProxyMock()
+    let loggerProxy = LoggerProxyMock()
     
 }
 
 extension ModelFactoryMock: IModelFactory {
     
-    func getMainMediator(delegate delegate: MainMediatorDelegate?, rootFolder: NSURL?) -> MainMediator {
-        return MainMediator(delegate: delegate, rootFolder: rootFolder, fileBrowserCommands: FileBrowserCommands(fileSystemProxy: fileSystemProxy), logger: logger)
+    func setupElementsForMainTableViewController() -> (fileBrowserCommands: IFileBrowserCommands, loggerProxy: ILoggerProxy) {
+        return (fileBrowserCommands: FileBrowserCommands(fileSystemProxy: fileSystemProxy), loggerProxy: loggerProxy)
     }
     
 }

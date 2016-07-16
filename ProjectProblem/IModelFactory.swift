@@ -10,6 +10,6 @@ import Foundation
 
 protocol IModelFactory {
     
-    func getMainMediator(delegate delegate: MainMediatorDelegate?, rootFolder: NSURL?) -> MainMediator
+    func setupElementsForMainTableViewController() -> (fileBrowserCommands: IFileBrowserCommands, loggerProxy: ILoggerProxy)
     
 }

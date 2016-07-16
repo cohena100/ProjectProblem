@@ -10,15 +10,18 @@ import XCTest
 
 class FileBrowserCommandsTest: XCTestCase {
 
+    var fileSystemProxy: IFileSystemProxy!
     var commands: IFileBrowserCommands!
     
     override func setUp() {
         super.setUp()
-        commands = FileBrowserCommands(fileSystemProxy: FileSystemProxyMock())
+        fileSystemProxy = FileSystemProxyMock()
+        commands = FileBrowserCommands(fileSystemProxy: fileSystemProxy)
     }
     
     override func tearDown() {
         commands = nil
+        fileSystemProxy = nil
         super.tearDown()
     }
 

@@ -10,13 +10,25 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
     
-    var mediator: MainMediator!
+    var fileBrowserCommands: IFileBrowserCommands!
+    weak var logger: ILoggerProxy!
     var rootFolder: NSURL?
+    var folderContent: [FileUI]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mediator = Model.sharedInstance.factory.getMainMediator(delegate: self, rootFolder: rootFolder)
-        self.title = mediator.title
+        self.title = rootFolder == nil ? "Root" : rootFolder?.lastPathComponent
+        let setupElements = Model.sharedInstance.factory.setupElementsForMainTableViewController()
+        self.logger = setupElements.loggerProxy
+        self.fileBrowserCommands = setupElements.fileBrowserCommands
+        folderContent = fileBrowserCommands.folderContent(rootFolder)
+        let logLine: String
+        if let rootFolder = rootFolder, path = rootFolder.relativePath {
+            logLine = path
+        } else {
+            logLine = ""
+        }
+        logger.log(logLine)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,15 +39,18 @@ class MainTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return mediator.numberOfSectionsInTableView()
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mediator.tableView(numberOfRowsInSection: section)
+        guard let folderContent = folderContent else {
+            return 0
+        }
+        return folderContent.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let folderContent = mediator.folderContent else {
+        guard let folderContent = folderContent else {
             abort()
         }
         let file = folderContent[indexPath.row]
@@ -53,15 +68,11 @@ class MainTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let vc = segue.destinationViewController as? MainTableViewController, indexPath = tableView.indexPathForSelectedRow, folderContent = mediator.folderContent else {
+        guard let vc = segue.destinationViewController as? MainTableViewController, indexPath = tableView.indexPathForSelectedRow, folderContent = folderContent else {
             abort()
         }
         let file = folderContent[indexPath.row]
         vc.rootFolder = file.path
     }
-    
-}
-
-extension MainTableViewController: MainMediatorDelegate {
     
 }
