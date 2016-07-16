@@ -17,10 +17,7 @@ class FileBrowserCommands {
         self.fileSystemProxy = fileSystemProxy
         self.loggerProxy = loggerProxy
     }
-}
 
-extension FileBrowserCommands: IFileBrowserCommands {
-    
     func folderContent(rootFolder: NSURL?) -> [FileUI]? {
         let line = rootFolder?.relativePath == nil ? "" : rootFolder!.relativePath!
         loggerProxy.log(line)

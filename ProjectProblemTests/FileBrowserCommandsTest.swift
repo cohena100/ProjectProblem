@@ -12,7 +12,7 @@ class FileBrowserCommandsTest: XCTestCase {
 
     var loggerProxy: LoggerProxyMock!
     var fileSystemProxy: FileSystemProxyMock!
-    var commands: IFileBrowserCommands!
+    var commands: FileBrowserCommands!
     
     override func setUp() {
         super.setUp()

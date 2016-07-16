@@ -10,6 +10,6 @@ import Foundation
 
 protocol IModelFactory {
     
-    func setupElementsForMainTableViewController() -> (fileBrowserCommands: IFileBrowserCommands, loggerProxy: ILoggerProxy)
+    func setupElementsForMainTableViewController() -> (fileBrowserCommands: FileBrowserCommands, loggerProxy: ILoggerProxy)
     
 }

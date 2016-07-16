@@ -10,7 +10,7 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
     
-    var fileBrowserCommands: IFileBrowserCommands!
+    var fileBrowserCommands: FileBrowserCommands!
     weak var logger: ILoggerProxy!
     var rootFolder: NSURL?
     var folderContent: [FileUI]?

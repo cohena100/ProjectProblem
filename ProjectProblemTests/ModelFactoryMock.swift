@@ -17,7 +17,7 @@ class ModelFactoryMock {
 
 extension ModelFactoryMock: IModelFactory {
     
-    func setupElementsForMainTableViewController() -> (fileBrowserCommands: IFileBrowserCommands, loggerProxy: ILoggerProxy) {
+    func setupElementsForMainTableViewController() -> (fileBrowserCommands: FileBrowserCommands, loggerProxy: ILoggerProxy) {
         return (fileBrowserCommands: FileBrowserCommands(fileSystemProxy: fileSystemProxy, loggerProxy: loggerProxy), loggerProxy: loggerProxy)
     }
     
