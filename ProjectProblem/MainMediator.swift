@@ -14,7 +14,7 @@ protocol MainMediatorDelegate: class {
 class MainMediator {
     
     let fileBrowserCommands: IFileBrowserCommands
-    let logger: ILoggerProxy
+    weak var logger: ILoggerProxy!
     weak var delegate: MainMediatorDelegate?
     var rootFolder: NSURL?
     var folderContent: [FileUI]?
