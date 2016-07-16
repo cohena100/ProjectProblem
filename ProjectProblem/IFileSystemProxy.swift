@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IFileSystemProxy {
+protocol IFileSystemProxy: class {
     
     func folderContent(rootFolder: NSURL?) -> [FileModel]?
     

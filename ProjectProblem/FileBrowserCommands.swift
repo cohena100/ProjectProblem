@@ -10,7 +10,7 @@ import Foundation
 
 class FileBrowserCommands {
     
-    let fileSystemProxy: IFileSystemProxy
+    weak var fileSystemProxy: IFileSystemProxy!
 
     init(fileSystemProxy: IFileSystemProxy) {
         self.fileSystemProxy = fileSystemProxy
